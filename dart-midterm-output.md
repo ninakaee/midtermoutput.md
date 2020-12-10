@@ -9,9 +9,9 @@ void main(){
     int total_rounds = int.parse(stdin.readLineSync());
     
   for (var i = 1; i <= total_rounds; i++){
-    print("Round $i: Papel, Gunting, Bato! What's your Pick?");
+    print("Round $i: Choose one between Papel, Gunting o Bato");
     String players_pick = stdin.readLineSync().toUpperCase();
-    print("$players_pick");
+    print("You chose: $players_pick");
   
   //BOT 
   var bot = ['PAPEL', 'GUNTING', 'BATO'];
@@ -21,14 +21,14 @@ void main(){
     if(players_pick == "PAPEL")
       {
         if(answer == "PAPEL") {
-           print("Bot: Papel 📄 - It's a Tie!");
+           print("Bot chose: Papel 📄 - It's a Tie!");
       }
         else if(answer == "BATO") {
-           print("Bot: Bato 🌑  - You Win!");
+           print("Bot chose: Bato 🌑  - You Win!");
            score_player++;
       }
         else if(answer == "GUNTING") {
-           print("Bot: Gunting ✂️ - You Lose!");
+           print("Bot chose: Gunting ✂️ - You Lose!");
            score_bot++;
       }
   }
@@ -36,29 +36,29 @@ void main(){
     else if(players_pick == "GUNTING")
     {
         if(answer == "PAPEL") {
-           print("Bot: Papel 📄 - You Win!");
+           print("Bot chose: Papel 📄 - You Win!");
            score_player++;
       }
         else if(answer == "BATO") {
-           print("Bot: Bato 🌑  - You Lose!");
+           print("Bot chose: Bato 🌑  - You Lose!");
            score_bot++;
       }
         else if(answer == "GUNTING") {
-           print("Bot: Gunting ✂️ - It's a Tie!");
+           print("Bot chose: Gunting ✂️ - It's a Tie!");
       }
   }
   //-------------------------------------------------------------
     else if(players_pick == "BATO")
     {
         if(answer == "PAPEL"){
-           print("Bot: Papel 📄 - You Lose!");
+           print("Bot chose: Papel 📄 - You Lose!");
            score_bot++;
       }
         else if(answer == "BATO"){
-           print("Bot: Bato 🌑  - It's a Tie!");
+           print("Bot chose: Bato 🌑  - It's a Tie!");
       }
          else if(answer == "GUNTING"){
-           print("Bot: Gunting ✂️ - You Win!");
+           print("Bot chose: Gunting ✂️ - You Win!");
            score_player++;
       }
   }
